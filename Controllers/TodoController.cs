@@ -11,8 +11,12 @@ namespace TodoApp.Controllers
     {
         public IActionResult Index()
         {
-            string todaysDate = DateTime.Now.ToShortDateString();
-            return Ok(todaysDate);
+            return View();
+        }
+        
+        public IActionResult Details(int id)
+        {
+            return Ok("you have entered id: " + id);
         }
     }
 }
